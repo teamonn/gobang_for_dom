@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>五子棋对战</title>  
+    <link rel="stylesheet" href="./css/my.css">
+</head>  
+<body>  
+    <div class="board_box" id="board_box"> 
+    	<div class="notication">点击按钮开始游戏</div> 
+		<div class="chessboard" id="chessboard" onmouseup="play(event)"></div>
+
+		<div class="play_mask" id="play_mask">
+			<div class="play_btn" onclick="start()">开始游戏</div>
+		</div>
+
+		<div class="middle_btn revoke_btn" onclick="revoke()">悔棋</div>
+		<div class="middle_btn cancelRevoke_btn" onclick="cancelRevoke()">撤销悔棋</div>
+        <i id="nextPiece"></i>
+    </div> 
+
+    <audio id="start_audio" loop="loop" preload="auto">
+        <source src="http://dx.sc.chinaz.com/Files/DownLoad/sound1/201703/8446.mp3" type="audio/mpeg">
+        你的浏览器不支持该音频播放
+    </audio>
+    <audio id="gameover_audio">
+        <source src="http://dx.sc.chinaz.com/Files/DownLoad/sound1/201504/5808.mp3" type="audio/mpeg">
+        你的浏览器不支持该音频播放
+    </audio>
+    <audio id="tap_audio" preload="auto">
+        <source src="http://zjdx1.sc.chinaz.com/Files/DownLoad/sound1/201202/831.mp3" type="audio/mpeg">
+        你的浏览器不支持该音频播放
+    </audio>
+    <audio id="revoke_audio">
+        <source src="http://zjdx1.sc.chinaz.com/Files/DownLoad/sound1/201607/7590.mp3" type="audio/mpeg">
+        你的浏览器不支持该音频播放
+    </audio>
+
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/my.js"></script> 
+</body>  
+</html>  
